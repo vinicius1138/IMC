@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ImC</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .card{
+            position: relative;
+            right: -600px;
+            top: 100px;
+            border: 3px;
+        }
+
+        #bt{
+            width: 100px;
+            height: 60px;
+            position: relative;
+            right: -41px;
+        }
+    
+    </style>
+    <script>
+    function media(){
+        var nome = document.getElementById("no").value
+        var pe = document.getElementById("n1").value
+        var al = document.getElementById("n2").value
+        var imc = pe/(al*al)
+        
+        if(imc<18.5){
+            alert(nome+" TÁ ABAIXO DO PESO, COM O IMC DE "+imc)
+        }
+        
+        if(imc>=18.5 && imc<=24.9){
+            alert(nome+" ESTA COM PESO NORMAL, COM O IMC DE "+imc)
+        }
+        
+        if(imc>=25 && imc<=29.9){
+            alert(nome+" TÁ ACIMA DO PESO, COM O IMC DE "+imc)
+        }
+        
+        if(imc>=30 && imc<=34.9){
+            alert(nome+" TÁ COM OBESIDADE GRAU I, COM O IMC DE "+imc)
+        }
+        
+        if(imc>=35 && imc<=39.9){
+            alert(nome+" TÁ COM OBESIDADE GRAU II, COM O IMC DE "+imc)
+        }
+        
+        if(imc>=40){
+            alert(nome+" TÁ COM OBESIDADE GRAU III, COM O IMC DE "+imc)
+        }
+    }
+    </script>
+</head>
+<body style="background-color:rgb(202, 206, 209); font-family: Tahoma">
+    <div class="card"> 
+        <h1><font face="Agency FB" color="black">Nome:</font></h1><br>
+    <input id="no" type="text"/><br>
+         <h1><font face="Agency FB" color="black">Peso:</font></h1><br>
+    <input id="n1" type="text"/><br>
+        <h1><font face="Agency FB" color="black">Altura:</font></h1><br>
+    <input id="n2" type="text"/><br>
+        
+    <br><br>
+
+    <button  style="background-color:#0CF; font-family: Agency FB; font-size:25px; border-radius: initial;" id="bt" 
+    onclick="media()">CALCULAR</button>
+    
+    </div>
+</body>
+</html>
